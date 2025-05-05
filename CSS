@@ -1,3 +1,11 @@
+/* 
+  YouTube Custom Cozy Dark Theme
+  - Applies a dark mode with soft accent colors
+  - Rounds thumbnail corners and user profile pictures
+  - Adds a dark overlay to thumbnails that fades on hover
+  - Styles sidebar and video titles with a cozy soft red (#F4978E)
+  - Removes borders and bright backgrounds for a cleaner look
+*/
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -16,7 +24,6 @@ a {
   text-decoration: none;
 }
 
-
 #content {
   background-color: #181818;
   color: #e0e0e0;
@@ -28,7 +35,6 @@ a {
   padding: 10px 20px;
   border-bottom: none;
 }
-
 
 #navigation {
   background-color: #202020;
@@ -46,7 +52,6 @@ a {
   color: #e0e0e0;
   font-size: 14px;
 }
-
 
 #header,
 #navigation,
@@ -66,20 +71,17 @@ a {
   background: none !important;
 }
 
-
 #sidebar #avatar img,
 .ytd-channel-name #avatar img {
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
-
 ytd-compact-video-renderer #thumbnail img,
 ytd-rich-grid-media #thumbnail img,
 ytd-video-renderer #thumbnail img,
 ytd-playlist-video-renderer #thumbnail img,
 ytd-virtual-channel-renderer #thumbnail img {
-
   transition: transform 0.3s ease-in-out;
   outline: none;
   width: 100%;
@@ -95,7 +97,6 @@ ytd-virtual-channel-renderer #thumbnail {
   position: relative;
   overflow: hidden;
 }
-
 
 ytd-compact-video-renderer #thumbnail::before,
 ytd-rich-grid-media #thumbnail::before,
@@ -114,7 +115,6 @@ ytd-virtual-channel-renderer #thumbnail::before {
   pointer-events: none;
 }
 
-
 ytd-compact-video-renderer:hover #thumbnail::before,
 ytd-rich-grid-media:hover #thumbnail::before,
 ytd-video-renderer:hover #thumbnail::before,
@@ -123,7 +123,6 @@ ytd-virtual-channel-renderer:hover #thumbnail::before {
   opacity: 0;
 }
 
-
 ytd-compact-video-renderer:hover #thumbnail img,
 ytd-rich-grid-media:hover #thumbnail img,
 ytd-video-renderer:hover #thumbnail img,
@@ -131,7 +130,6 @@ ytd-playlist-video-renderer:hover #thumbnail img,
 ytd-virtual-channel-renderer:hover #thumbnail img {
   transform: scale(1.05);
 }
-
 
 .ytd-rich-grid-media,
 .ytd-compact-video-renderer,
@@ -151,16 +149,13 @@ ytd-virtual-channel-renderer:hover #thumbnail img {
   font-weight: bold;
 }
 
-
 .video-title-link {
   color: #F4978E !important;
 }
 
-
 .video-title-link:hover {
   color: #ff0000;
 }
-
 
 button, a {
   background-color: none;
@@ -174,9 +169,23 @@ button:hover, a:hover {
   background-color: none;
 }
 
-
 .ytp-chrome-bottom {
   background-color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
 }
 
+/* Compact UI adjustments */
+button, a {
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+}
 
+#sidebar a {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.ytp-chrome-bottom {
+  font-size: 12px;
+}
